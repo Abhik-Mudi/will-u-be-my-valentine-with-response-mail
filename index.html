@@ -117,23 +117,172 @@
             text-shadow: 0 0 15px rgba(227, 27, 109, 0.8);
         }
 
-        @media (max-width: 600px) {
+        /* Tablet Styles (768px to 1024px) */
+        @media (max-width: 1024px) {
+            .container {
+                width: 90%;
+                max-width: 550px;
+                padding: 2rem;
+            }
+
             h1 {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
+
+            .proposal-btns {
+                gap: 15px;
+            }
+
+            .letter-content {
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+        }
+
+        /* Mobile Styles (max-width: 768px) */
+        @media (max-width: 768px) {
+            body {
+                height: auto;
+                min-height: 100vh;
+                overflow-y: auto;
+                padding: 20px 0;
             }
 
             .container {
+                width: 95%;
+                max-width: 100%;
                 padding: 1.5rem;
+                margin: 20px auto;
+                border-radius: 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+
+            .btn {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+                margin: 8px;
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 10px;
+                margin-bottom: 15px;
             }
 
             .photo-card {
-                height: 180px;
+                height: 150px;
                 padding: 8px;
+            }
+
+            .proposal-btns {
+                flex-direction: column;
+                /* height: auto; */
+                gap: 5px;
+            }
+
+            .proposal-btns .btn {
+                width: 50%;
+            }
+
+            .letter-content {
+                font-size: 1.2rem;
+                padding: 15px;
+                min-height: 150px;
+            }
+
+            .music-control {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+                font-size: 20px;
+            }
+        }
+
+        /* Small Mobile Styles (max-width: 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px 0;
+            }
+
+            .container {
+                width: 98%;
+                padding: 1.2rem;
+                margin: 15px auto;
+                border-radius: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                margin-bottom: 0.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+                margin-bottom: 0.8rem;
+                line-height: 1.5;
+            }
+
+            .btn {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+                margin: 6px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .photo-card {
+                height: 200px;
+                padding: 6px;
+            }
+
+            .photo-card img {
+                border-radius: 3px;
+            }
+
+            .proposal-btns {
+                gap: 10px;
+                padding: 0 10px;
+            }
+
+            .proposal-btns .btn {
+                width: 100%;
+                padding: 10px 15px;
+            }
+
+            .letter-content {
+                font-size: 1rem;
+                padding: 12px;
+                min-height: 120px;
+            }
+
+            .music-control {
+                width: 40px;
+                height: 40px;
+                bottom: 10px;
+                right: 10px;
+                font-size: 18px;
             }
         }
 
@@ -236,12 +385,12 @@
         /* Interactive Proposal Buttons */
         .proposal-btns {
             position: relative;
-            height: 80px;
+            /* height: 80px; */
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
         }
 
         #noBtn {
@@ -479,6 +628,9 @@
                 });
             }
         }
+
+        // Play music on app load
+        playMusic();
     </script>
 </body>
 
